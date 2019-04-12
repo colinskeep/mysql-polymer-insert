@@ -43,7 +43,7 @@ class MyView2 extends PolymerElement {
   }
   _fire() {
     console.log('attempting to insert MySQL records');
-    const arr = this.fbasku.split('\n');
+    const arr = this.import.replace(/\s/g, '').split('\n');
     const url = 'http://192.168.1.106:9000/scanzor';
     fetch(url, {
       method: 'POST',
@@ -58,7 +58,7 @@ class MyView2 extends PolymerElement {
     }).catch(err => {
       console.log(err);
     });
-    this.fbasku = '';
+    this.import = '';
   }
 }
 

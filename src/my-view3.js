@@ -44,7 +44,7 @@ class MyView3 extends PolymerElement {
   _fire() {
     console.log('attempting to insert MySQL records');
     const arr = this.fbasku.split('\n');
-    const url = 'http://192.168.1.106:9000/scanzor';
+    const url = 'http://192.168.1.106:9000/fnsku';
     fetch(url, {
       method: 'POST',
       body: JSON.stringify({values: arr}),
